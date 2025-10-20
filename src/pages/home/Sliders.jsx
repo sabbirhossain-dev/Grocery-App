@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import SliderCard from "./sliderCard";
+import SliderCard from "./SliderCard";
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs";
 import { assets } from '../../assets/assets';
 
