@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoEyeOutline } from "react-icons/io5";
 import { GoHeart } from "react-icons/go";
-import AddToCart from './addToCart';
+import AddToCart from './AddToCart';
 import { Link } from 'react-router-dom';
 
 
@@ -19,7 +19,7 @@ const ItemsCard = ({id,name,desc,price,subprice,image}) => {
 
        <div className='flex flex-col gap-3 justify-center items-center'>
          <div>
-          <img src={image} alt='cucumber' />
+          <img src={image} alt='cucumber' className='h-40 w-auto'/>
         </div>
         <div className='flex flex-col gap-1 justify-center items-center'>
           <p className='lato-bold text-[14px] text-[#075212]'>{name}</p>

@@ -1,23 +1,42 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom'
-import { BiDownArrow, BiSearch } from 'react-icons/bi'
+import { BiSearch } from 'react-icons/bi'
 import { MdShoppingCart } from "react-icons/md";
-import { FaBarcode, FaBars, FaCross, FaRegUser } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa6";
 import { MdKeyboardArrowUp, MdOutlineShoppingBag } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from 'react-icons/rx';
-import { HiMiniBars3, HiMiniBars3BottomLeft } from 'react-icons/hi2';
+import {HiMiniBars3BottomLeft } from 'react-icons/hi2';
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isPageopen, setIsPageOpen] = useState(false)
     const [menuToggle, setMenuToggle] = useState(false)
+    const [isSticky, setIsSticky] = useState(false)
+
+    useEffect(() => {
+    const handleScroll = () => {
+    // You can adjust this offset if needed
+    if (window.scrollY > 10) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
 
   return (
     <>
-        <div className='bg-[#E9F5E9] pt-10 pb-10 font-semibold'>
+        <div className={`bg-[#E9F5E9] pt-5 pb-5 md:pt-10 md:pb-10 font-semibold sticky top-0 z-50 ${isSticky? "border-b border-[#bfdfc3] shadow-sm" : ""}`}>
 <div className='mr-8 ml-8 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28 '>
 
 {/* toggle menubar start */}
@@ -49,11 +68,11 @@ const Navbar = () => {
 
 
 {/* toggle menu item start */}
-{menuToggle && (
+    {menuToggle && (
      <motion.div
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 10 }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 30 }}
+        exit={{ opacity: 0, x: 10 }}
         transition={{ duration: 0.3 }}
         className='md:hidden w-3/5 absolute right-0'>
         <ul className='flex flex-col justify-center pl-32 p-5 pb-10 rounded-md mt-2 w-full bg-[#E9F5E9] shadow-xl gap-7 text-md'>
