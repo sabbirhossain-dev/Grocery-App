@@ -17,7 +17,7 @@ const About = () => {
                         </div>
 
                         <div className='w-full md:w-7/12'>
-                            <img src={assets.about_img} alt='orange' className='w-full h-[420px]'/>
+                            <img src={assets.about_img} alt='orange' className='w- auto md:w-full h-[250px] md:h-[420px]'/>
                         </div>
 
                     </div>
@@ -32,36 +32,36 @@ const About = () => {
     
             <div className='mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28'>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20'>
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-20'>
               <div className='flex gap-2 w-1/4'>
-              <img src={assets.aboutlogo1} alt='logo' className='h-8 mt-1'/>
+              <img src={assets.aboutlogo1} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p className='lato-bold text-[24px] text-white tracking-wide'>Premium Quality</p>
-                  <p className='lato-regular text-[14px] text-white w-56 leading-6'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Premium Quality</p>
+                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
-              <img src={assets.aboutlogo2} alt='logo' className='h-8 mt-1'/>
+              <img src={assets.aboutlogo2} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p className='lato-bold text-[24px] text-white tracking-wide'>Free Delivery</p>
-                  <p className='lato-regular text-[14px] text-white w-56 leading-6'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Free Delivery</p>
+                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
-              <img src={assets.aboutlogo3} alt='logo' className='h-8 mt-1'/>
+              <img src={assets.aboutlogo3} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p className='lato-bold text-[24px] text-white tracking-wide'>Best Price & Offer</p>
-                  <p className='lato-regular text-[14px] text-white w-56 leading-6'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Best Price & Offer</p>
+                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
-              <img src={assets.aboutlogo4} alt='logo' className='h-8 mt-1'/>
+              <img src={assets.aboutlogo4} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p className='lato-bold text-[24px] text-white tracking-wide'>Easy Return</p>
-                  <p className='lato-regular text-[14px] text-white w-56 leading-6'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Easy Return</p>
+                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 

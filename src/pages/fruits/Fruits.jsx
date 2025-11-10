@@ -125,7 +125,7 @@ const handlePriceToggle = (e) => {
 
       <div className="pt-20 pb-20 font-semibold bg-white">
         <div className="mx-6 md:mx-16 lg:mx-28">
-          <p className='lato-bold text-[30px] md:text-[35px] lg:text-[48px] text-[#075212] text-center pb-10'>Fruit</p>
+          {/* <p className='lato-bold text-[30px] md:text-[35px] lg:text-[48px] text-[#075212] text-center pb-10'>All items</p> */}
 
           <div className='flex-1'>
             <div className='flex gap-4 justify-between items-center mb-6 border-t border-b border-[#e4e4e4] py-5 px-1'>

@@ -63,6 +63,16 @@ import fruitImg12 from '../assets/fruit_img12.png'
 import fruitImg13 from '../assets/fruit_img13.png'
 import fruitImg14 from '../assets/fruit_img14.png'
 import fruitImg15 from '../assets/fruit_img15.png'
+import coffee1 from '../assets/coffee1.png'
+import coffee2 from '../assets/coffee2.png'
+import coffee3 from '../assets/coffee3.png'
+import dink1 from '../assets/drink1.png'
+import dink2 from '../assets/drink2.png'
+import dink3 from '../assets/drink3.png'
+import dink4 from '../assets/drink4.png'
+import meat1 from '../assets/meat1.png'
+import meat2 from '../assets/meat2.png'
+import chicken1 from '../assets/chicken1.png'
 import brecent1 from '../assets/brecent1.png'
 import brecent2 from '../assets/brecent2.png'
 import brecent3 from '../assets/brecent3.png'
@@ -411,6 +421,106 @@ export const fruits = [
         category: "Milk & Dairy",
         bestseller: true
     },
+     {
+        _id: "aaaba",
+        name: "Organic Coffee",
+        description: "Available in - 500gm",
+        price: 24.00 ,
+        subprice : 28.00,
+        image: coffee1,
+        category: "Coffee & Drinks",
+        bestseller: true
+    },
+     {
+        _id: "aaabb",
+        name: "Organic Coffee",
+        description: "Available in - 500gm",
+        price: 24.00 ,
+        subprice : 48.00,
+        image: coffee2,
+        category: "Coffee & Drinks",
+        bestseller: true
+    },
+     {
+        _id: "aaabc",
+        name: "Organic Coffee",
+        description: "Available in - 500gm",
+        price: 29.00 ,
+        subprice : 58.00,
+        image: coffee3,
+        category: "Coffee & Drinks",
+        bestseller: true
+    },
 
+     {
+        _id: "aaabd",
+        name: "Soft Drinks",
+        description: "Available in - 500gm",
+        price: 10.00 ,
+        subprice : 20.00,
+        image: dink1,
+        category: "Coffee & Drinks",
+        bestseller: false
+    },
+     {
+        _id: "aaabe",
+        name: "Soft Drinks",
+        description: "Available in - 500gm",
+        price: 10.00 ,
+        subprice : 20.00,
+        image: dink2,
+        category: "Coffee & Drinks",
+        bestseller: false
+    },
+   {
+        _id: "aaabf",
+        name: "Soft Drinks",
+        description: "Available in - 500gm",
+        price: 10.00 ,
+        subprice : 20.00,
+        image: dink3,
+        category: "Coffee & Drinks",
+        bestseller: false
+    },
+     {
+        _id: "aaabf",
+        name: "Soft Drinks",
+        description: "Available in - 500gm",
+        price: 10.00 ,
+        subprice : 20.00,
+        image: dink4,
+        category: "Coffee & Drinks",
+        bestseller: true
+    },
+     {
+        _id: "aaabg",
+        name: "Organic Meat",
+        description: "Available in - 500gm",
+        price: 30.00 ,
+        subprice : 60.00,
+        image: meat1,
+        category: "Meat",
+        bestseller: true
+    },
+     {
+        _id: "aaabh",
+        name: "Organic Meat",
+        description: "Available in - 500gm",
+        price: 30.00 ,
+        subprice : 60.00,
+        image: meat2,
+        category: "Meat",
+        bestseller: true
+    },
+     {
+        _id: "aaabi",
+        name: "Organic Chicken",
+        description: "Available in - 500gm",
+        price: 20.00 ,
+        subprice : 40.00,
+        image: chicken1,
+        category: "Meat",
+        bestseller: true
+    },
 
 ]

@@ -17,12 +17,12 @@ const Home = () => {
 
             <div className='flex flex-col gap-7 md:flex-row justify-between items-center'>
               <div className='w-full lg:w-1/2'>
-              <h2 className='lato-bold text-[50px] lg:text-[64px] text-[#075212]'>Eat <span className='text-[#FE9C00]'>Fresh</span> & <span className='text-[#FE9C00]'>Safe</span> Food to Enjoy  Healthy Life</h2>
+              <h2 className='lato-bold text-[40px] lg:text-[64px] text-[#075212]'>Eat <span className='text-[#FE9C00]'>Fresh</span> & <span className='text-[#FE9C00]'>Safe</span> Food to Enjoy  Healthy Life</h2>
               <p className='text-[#075212] lato-regular text-sm md:text-md pt-6 pb-6'>Lorem ipsum dolor sit amet consectetur. Elementum proin odio tincidunt viverra. Mollis vitae lorem tempor pellentesque mi mauris quisque ac. Nibh placerat augue eget iaculis bibendum augue lacus. Eu quisque auctor laoreet q</p>
               <div className='flex gap-5'>
-                <button className='p-3 md:pl-5 md:pr-5 bg-[#FE9C00] text-white rounded-md text-sm hover:rounded-none transition-all duration-300'>Start Shopping</button>
+                <button className='p-2 md:p-3 md:pl-5 md:pr-5 bg-[#FE9C00] text-white rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300'>Start Shopping</button>
 
-                <button className='flex gap-2 items-center p-3 md:pl-5 md:pr-5 bg-transparent border border-[#FE9C00] text-[#075212] rounded-md text-sm hover:rounded-none transition-all duration-300'><span><FaCirclePlay size={22} className='text-[#FE9C00]' /></span>Order Process</button>
+                <button className='flex gap-2 items-center p-2 md:p-3 md:pl-5 md:pr-5 bg-transparent border border-[#FE9C00] text-[#075212] rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300'><span><FaCirclePlay size={21} className='text-[#FE9C00]' /></span>Order Process</button>
               </div>
             </div>
 

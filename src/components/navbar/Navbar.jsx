@@ -74,8 +74,8 @@ const Navbar = () => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 10 }}
         transition={{ duration: 0.3 }}
-        className='md:hidden w-3/5 absolute right-0'>
-        <ul className='flex flex-col justify-center pl-32 p-5 pb-10 rounded-md mt-2 w-full bg-[#E9F5E9] shadow-xl gap-7 text-md'>
+        className='md:hidden w-3/5 h-screen absolute right-0 bg-[#E9F5E9]'>
+        <ul className='flex flex-col justify-center pl-16 p-5 pb-10 rounded-md mt-2 w-full gap-7 text-md'>
         <li><NavLink
             to="/"
             className={({ isActive }) =>

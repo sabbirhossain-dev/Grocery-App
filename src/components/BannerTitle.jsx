@@ -11,7 +11,7 @@ const BannerTitle = ({title,image}) => {
 
             {/* Title (centered) */}
             <div className="w-full md:w-9/12 mb-6 md:mb-0 text-center ">
-              <h3 className="w-full mx-auto text-[36px] md:text-[40px] lg:text-[48px] font-bold lato-bold text-[#075212] text-center mt-[-10px] md:mt-[-60px] lg:mt-[-80px] pl-0 md:pl-56">
+              <h3 className="w-full mx-auto text-[30px] md:text-[40px] lg:text-[48px] font-bold lato-bold text-[#075212] text-center mt-[-10px] md:mt-[-60px] lg:mt-[-80px] pl-0 md:pl-56">
                 {title}
               </h3>
             </div>

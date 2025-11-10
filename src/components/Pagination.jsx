@@ -13,7 +13,7 @@ export default function Pagination() {
         <button
           key={page}
           onClick={() => setCurrentPage(page)}
-          className={`w-9 h-9 border rounded ${
+          className={`w-6 h-6 md:h-8 md:w-8 lg:h-9 lg:w-9 border rounded text-xs md:text-sm ${
             currentPage === page ? 'bg-green-100 font-bold' : ''
           }`}
         >
@@ -24,9 +24,9 @@ export default function Pagination() {
       <button
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage === pages.length}
-        className="w-9 h-9 inline-flex justify-center items-center border rounded text-green-700 disabled:text-gray-300"
+        className="w-6 h-6 md:h-8 md:w-8 lg:h-9 lg:w-9 inline-flex justify-center items-center border rounded text-green-700 disabled:text-gray-300"
       >
-        <IoIosArrowForward size={24}/>
+        <IoIosArrowForward size={22}/>
       </button>
     </div>
   );
