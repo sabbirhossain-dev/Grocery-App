@@ -82,6 +82,9 @@ import binsta3 from '../assets/binsta3.png'
 import commentsImg1 from '../assets/commentsImg1.png'
 import commentsImg2 from '../assets/commentsImg2.png'
 import commentsImg3 from '../assets/commentsImg3.png'
+import avocado from '../assets/avocado.png'
+import cherry from '../assets/cherry.png'
+import raspeberry from '../assets/raspeberry.png'
 
 
 
@@ -189,7 +192,7 @@ export const fruits = [
         description: "Available in - 500gm",
         price: 18.00 ,
         subprice: 20.00 ,
-        image: fruitImg1,
+        image: raspeberry,
         category: "Fruit",
         bestseller: false
     },
@@ -209,7 +212,7 @@ export const fruits = [
         description: "Available in - 500gm",
         price: 18.00 ,
         subprice: 20.00 ,
-        image: fruitImg6,
+        image: avocado,
         category: "Fruit",
         bestseller: true
     },
@@ -229,7 +232,7 @@ export const fruits = [
         description: "Available in - 500gm",
         price: 18.00 ,
         subprice: 20.00 ,
-        image: fruitImg7,
+        image: cherry,
         category: "Fruit",
         bestseller: true
     },
@@ -314,16 +317,16 @@ export const fruits = [
         category: "Vegetables",
         bestseller: true
     },
-    {
-        _id: "aaaaq",
-        name: "Organic Orange",
-        description: "Available in - 500gm",
-        price: 10.00 ,
-        subprice : 20.00,
-        image: bestsellerImg2,
-        category: "Fruit",
-        bestseller: true
-    },
+    // {
+    //     _id: "aaaaq",
+    //     name: "Organic Orange",
+    //     description: "Available in - 500gm",
+    //     price: 10.00 ,
+    //     subprice : 20.00,
+    //     image: bestsellerImg2,
+    //     category: "Fruit",
+    //     bestseller: true
+    // },
 
       {
         _id: "aaaar",
@@ -335,16 +338,16 @@ export const fruits = [
         category: "Vegetables",
         bestseller: true
     },
-    {
-        _id: "aaaas",
-        name: "Organic Apple",
-        description: "Available in - 500gm",
-        price: 10.00 ,
-        subprice : 20.00,
-        image: bestsellerImg4,
-        category: "Fruit",
-        bestseller: true
-    },
+    // {
+    //     _id: "aaaas",
+    //     name: "Organic Apple",
+    //     description: "Available in - 500gm",
+    //     price: 10.00 ,
+    //     subprice : 20.00,
+    //     image: bestsellerImg4,
+    //     category: "Fruit",
+    //     bestseller: true
+    // },
 
       {
         _id: "aaaat",

@@ -10,9 +10,9 @@ import { LuCopyright } from "react-icons/lu";
 const Footer = () => {
   return (
     <>
-       <div className='bg-[#075212] text-white pt-16 pb-16'>
+       <div className='bg-[#075212] text-white p-10 md:pt-16 pb-10 md:pb-16'>
 
-        <div className='flex flex-col gap-20 mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28 lato-regular'>
+        <div className='flex flex-col gap-10 md:gap-20 mr-1 ml-1 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28 lato-regular'>
 
 
             <div className='flex flex-col gap-16 lg:flex-row justify-between'>
@@ -24,7 +24,7 @@ const Footer = () => {
                         <p className='oleo-script-regular text-3xl -mt-2'>gr<span className='text-[#FE9C00]'>o</span>cery<span className='text-[#FE9C00]'>.</span></p>
                         </div>
                         </NavLink>
-                        <p className='text-md w-36 pt-5 pb-2 leading-tight'>Subscribe to our newsletter</p>
+                        <p className='text-sm md:text-md w-36 pt-5 pb-2 leading-tight'>Subscribe to our newsletter</p>
                         <div className='relative'>
                             <input placeholder='Your email' type='email' className='bg-transparent border-b placeholder:text-white pb-1' />
                             <button className='absolute right-0 bottom-1'><GoArrowUpRight size={20}/></button>
@@ -33,9 +33,9 @@ const Footer = () => {
 
 
 
-                        <div className='flex flex-col gap-5 text-[16px]'>
-                            <p className='text-[18px]'>Useful Links</p>
-                            <ul className='flex flex-col gap-2'>
+                        <div className='flex flex-col gap-5 text-[12px] md:text-[16px]'>
+                            <p className='text-[15px] md:text-[18px]'>Useful Links</p>
+                            <ul className='flex flex-col gap-2 '>
                                 <li><NavLink to='/'>Home</NavLink></li>
                                 <li><NavLink to='/pages/about'>About</NavLink></li>
                                 <li><NavLink to='/shop'>Shop</NavLink></li>
@@ -47,8 +47,8 @@ const Footer = () => {
             </div>
 
             <div className='flex w-full gap-20 md:w-5/12 md:gap-32'>
-                <div className='flex flex-col gap-5 text-[16px]'>
-                <p className='text-[18px]'>Categories</p>
+                <div className='flex flex-col gap-5 text-[12px] md:text-[16px]'>
+                <p className='text-[15px] md:text-[18px]'>Categories</p>
                 <ul className='flex flex-col gap-2'>
                     <li><NavLink to='/vegetables'>Vegetables</NavLink></li>
                     <li><NavLink to='/fruits'>Fruit</NavLink></li>
@@ -62,8 +62,8 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div className='flex flex-col gap-5 text-[16px]'>
-                <p className='text-[18px]'>Contact</p>
+            <div className='flex flex-col gap-5 text-[12px] md:text-[16px]'>
+                <p className='text-[15px] md:text-[18px]'>Contact</p>
                 <ul className='flex flex-col gap-2'>
                     <li>+1(313)4285227</li>
                     <li>info@jemstione.com</li>
@@ -72,8 +72,8 @@ const Footer = () => {
             </div>
             </div>
 
-            <div className='flex flex-col gap-5 text-[16px]'> 
-            <p className='text-[18px]'>Follow Us:</p>
+            <div className='flex flex-col gap-5 text-[12px] md:text-[16px]'> 
+            <p className='text-[15px] md:text-[18px]'>Follow Us:</p>
                 <ul className='flex gap-3'>
                     <li className='border p-1 rounded-sm cursor-pointer'><Link to='/'>
                         <FaInstagram />
@@ -97,7 +97,7 @@ const Footer = () => {
 
 
 
-        <div className='flex justify-between pt-2 border-t text-[#748398] border-t-[#748398] text-sm'>
+        <div className='flex justify-between pt-2 border-t text-[#748398] border-t-[#748398] text-xs md:text-sm'>
           <div className='flex justify-between items-center gap-1'>
             <LuCopyright />
             <p>2020 Casir. All right reserved</p>

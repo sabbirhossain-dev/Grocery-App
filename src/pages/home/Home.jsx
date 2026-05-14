@@ -6,6 +6,7 @@ import BestSeller from './BestSeller';
 import About from './About';
 import Feedback from './Feedback';
 import Blogs from './Blogs';
+import CartButton from '../../components/CartButton';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
     <>
       <div className='bg-[#E9F5E9] pt-10 pb-10 font-semibold'>
 
+          <CartButton />
           <div className='mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28'>
 
             <div className='flex flex-col gap-7 md:flex-row justify-between items-center'>

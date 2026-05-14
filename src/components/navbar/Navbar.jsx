@@ -56,7 +56,7 @@ const Navbar = () => {
     <div className='flex gap-6'>
         <ul className='flex justify-center items-center gap-4 text-[#075212]'>
             <Link><BiSearch size={20} /></Link>
-            <Link to="/cart"><MdOutlineShoppingBag  size={20}  /></Link>
+            {/* <Link to="/cart"><MdOutlineShoppingBag  size={20}  /></Link> */}
             <Link><FaRegUser size={18} /></Link>
         </ul>
         <button className='text-[#075212] bg-[#E9F5E9] p-[5px] border border-[#FE9C00] shadow-sm  rounded-md' onClick={()=>{setMenuToggle(!menuToggle)}}>
@@ -101,6 +101,9 @@ const Navbar = () => {
 
                 {isOpen && (
                     <ul className='absolute -left-32 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-80 bg-white shadow-xl z-50'>
+                     <li className='text-[#075212] hover:text-[#FE9C00]'>
+                            <NavLink to='shop' onClick={()=>{setMenuToggle(!menuToggle)}}>All items</NavLink>
+                        </li>
                         <li className='text-[#075212] hover:text-[#FE9C00]'>
                             <NavLink to='shop/fruits' onClick={()=>{setMenuToggle(!menuToggle)}}>Fruits</NavLink>
                         </li>
@@ -224,6 +227,9 @@ const Navbar = () => {
                         {isOpen && (
                             <ul className='absolute -left-40 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-96 bg-white shadow-xl'>
                                 <li className='text-[#075212] hover:text-[#FE9C00]'>
+                                    <NavLink to='shop'>All items</NavLink>
+                                </li>
+                                <li className='text-[#075212] hover:text-[#FE9C00]'>
                                     <NavLink to='shop/fruits'>Fruits</NavLink>
                                 </li>
                                 <li className='text-[#075212] hover:text-[#FE9C00]'>
@@ -293,8 +299,8 @@ const Navbar = () => {
 
             <div>
                 <ul className='flex justify-center items-center gap-4 text-[#075212]'>
-                    <Link><BiSearch size={20} /></Link>
-                    <Link to="/cart"><MdOutlineShoppingBag  size={20}  /></Link>
+                    <Link to='/shop'><BiSearch size={20} /></Link>
+                    {/* <Link to="/cart"><MdOutlineShoppingBag  size={20}  /></Link> */}
                     <Link><FaRegUser size={18}  /></Link>
                 </ul>
             </div>

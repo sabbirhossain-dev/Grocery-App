@@ -7,32 +7,33 @@ import Pagination from '../../components/Pagination'
 import {BsSearch } from 'react-icons/bs'
 import { GoPlus } from 'react-icons/go'
 import { HiMinus } from 'react-icons/hi2'
+import CartButton from '../../components/CartButton'
 
 const Fruits = () => {
-  const { fruits } = useContext(ShopContext);
+  const { fruits,addToCart } = useContext(ShopContext);
   const [fruitsItems, setFruitItems] = useState([]);
-  const [category, setCategory] = useState([]);
+  // const [category, setCategory] = useState([]);
   const [price, setPrice] = useState([]);
-  const [categoryToggle, setCategoryToggle] = useState(true);
+  // const [categoryToggle, setCategoryToggle] = useState(true);
   const [priceToggle, setPriceToggle] = useState(true);
   const [sortTypes, setSortTypes] = useState("relevant");
   const [searchTerm, setSearchTerm] = useState("");
 
 
   // category filter
-  const handlecategoryToggle = (e) => {
-    const value = e.target.value;
+  // const handlecategoryToggle = (e) => {
+  //   const value = e.target.value;
 
-    if (value === "All") {
-      setCategory([]); // Reset categories
-    } else {
-      setCategory((prev) =>
-        prev.includes(value)
-          ? prev.filter((item) => item !== value)
-          : [...prev, value]
-      );
-    }
-  };
+  //   if (value === "All") {
+  //     setCategory([]); // Reset categories
+  //   } else {
+  //     setCategory((prev) =>
+  //       prev.includes(value)
+  //         ? prev.filter((item) => item !== value)
+  //         : [...prev, value]
+  //     );
+  //   }
+  // };
 
   // Price filter handler
 const handlePriceToggle = (e) => {
@@ -51,10 +52,12 @@ const handlePriceToggle = (e) => {
   useEffect(() => {
     let filtered = [...fruits];
 
+    filtered = filtered.filter((item) => item.category === "Fruit");
+
     // Filter by category
-    if (category.length > 0) {
-      filtered = filtered.filter((item) => category.includes(item.category));
-    }
+    // if (category.length > 0) {
+    //   filtered = filtered.filter((item) => category.includes(item.category));
+    // }
 
     // Search by product name
     if (searchTerm.trim() !== "") {
@@ -89,21 +92,21 @@ const handlePriceToggle = (e) => {
 
 
     setFruitItems(filtered);
-  }, [fruits, category, sortTypes, searchTerm,price]);
+  }, [fruits, /*category,*/ sortTypes, searchTerm,price]);
 
 
-  const categoriesList = [
-  "All",
-  "Vegetables",
-  "Fruit",
-  "Meat",
-  "Fish",
-  "Milk & Dairy",
-  "Coffee & Drinks",
-  "Grocery",
-  "Pet Food",
-  "Cleaning Essentials"
-];
+//   const categoriesList = [
+//   "All",
+//   "Vegetables",
+//   "Fruit",
+//   "Meat",
+//   "Fish",
+//   "Milk & Dairy",
+//   "Coffee & Drinks",
+//   "Grocery",
+//   "Pet Food",
+//   "Cleaning Essentials"
+// ];
 
 
   const categoriesPriceList = [
@@ -123,18 +126,23 @@ const handlePriceToggle = (e) => {
         <BannerTitle title="Find the Product you need from our Vast Collection" image={assets.shopbanner} />
       </div>
 
-      <div className="pt-20 pb-20 font-semibold bg-white">
+      <CartButton />
+
+
+      <div className="pt-10 pb-20 font-semibold bg-white">
+          <div className='flex justify-center items-center'><h2 className='text-3xl text-[#075212] pb-10'>Fruits</h2></div>
+
         <div className="mx-6 md:mx-16 lg:mx-28">
           {/* <p className='lato-bold text-[30px] md:text-[35px] lg:text-[48px] text-[#075212] text-center pb-10'>All items</p> */}
 
           <div className='flex-1'>
             <div className='flex gap-4 justify-between items-center mb-6 border-t border-b border-[#e4e4e4] py-5 px-1'>
-              <div className='w-1/2 md:w-1/5 bg-[#E9F5E9] p-3 rounded-sm flex items-center gap-2'>
+              <div className='w-1/2 md:w-3/4 bg-[#E9F5E9] p-3 rounded-sm flex items-center gap-5'>
               <span className='text-[#075212]'><BsSearch size={16}/></span>
                 <input type='text' placeholder='Search Product' className="text-[16px] lato-regular text-[#075212] w-full placeholder:text-[#075212] outline-none border-none bg-transparent" value={searchTerm} onChange={(e)=> setSearchTerm(e.target.value)}/>
               </div>
 
-              <select className="bg-[#E9F5E9] p-3 text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/5 outline-none border-none  rounded-sm" onChange={(e)=>{setSortTypes(e.target.value)}}>
+              <select className="bg-[#E9F5E9] p-3 text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm" onChange={(e)=>{setSortTypes(e.target.value)}}>
                 <option value="relevant">Sort by: relevant</option>
                 <option value="low-high">Sort by: Low to High</option>
                 <option value="high-low">Sort by: High to Low</option>
@@ -148,7 +156,7 @@ const handlePriceToggle = (e) => {
             {/* filter sidebar here */}
               <div className='w-full md:w-3/12 flex flex-col gap-5'>
 
-              {/* category */}
+              {/* category
                 <div className=''>
                   <div className='flex justify-between bg-[#E9F5E9] p-3'>
                   <p className='text-[16px] text-[#075212] lato-regular'>Category</p>
@@ -169,7 +177,7 @@ const handlePriceToggle = (e) => {
                 </div>
               ))}
                 </div>
-                </div>
+                </div> */}
 
                 {/* price  */}
 
@@ -209,6 +217,7 @@ const handlePriceToggle = (e) => {
                 ) : (
                   fruitsItems.map((item, index) => (
                     <ItemsCard
+                      item={item}
                       key={index}
                       name={item.name}
                       id={item._id}
@@ -216,6 +225,7 @@ const handlePriceToggle = (e) => {
                       price={item.price}
                       subprice={item.subprice}
                       image={item.image}
+                      addToCart={addToCart}
                     />
                   ))
                 )}

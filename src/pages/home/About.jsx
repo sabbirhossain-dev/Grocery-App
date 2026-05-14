@@ -28,40 +28,40 @@ const About = () => {
 
 
 {/* more about us */}
-        <div className='bg-[#075212] pt-20 pb-20 font-semibold'>
+        <div className='bg-[#075212] pt-10 md:pt-20 pb-10 md:pb-20 font-semibold'>
     
             <div className='mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28'>
 
-            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-20'>
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-20'>
               <div className='flex gap-2 w-1/4'>
               <img src={assets.aboutlogo1} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Premium Quality</p>
-                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p className='lato-bold text-[17px] md:text-[24px] text-white tracking-wide'>Premium Quality</p>
+                  <p className='lato-regular text-[11px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
               <img src={assets.aboutlogo2} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Free Delivery</p>
-                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[17px] md:text-[24px] text-white tracking-wide'>Free Delivery</p>
+                  <p className='lato-regular text-[11px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
               <img src={assets.aboutlogo3} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Best Price & Offer</p>
-                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[17px] md:text-[24px] text-white tracking-wide'>Best Price & Offer</p>
+                  <p className='lato-regular text-[11px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 
               <div className='flex gap-2 w-1/4'>
               <img src={assets.aboutlogo4} alt='logo' className='h-6 md:h-8 mt-1'/>
                 <div className='flex flex-col gap-2'>
-                  <p  className='lato-bold text-[18px] md:text-[24px] text-white tracking-wide'>Easy Return</p>
-                  <p className='lato-regular text-[12px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
+                  <p  className='lato-bold text-[17px] md:text-[24px] text-white tracking-wide'>Easy Return</p>
+                  <p className='lato-regular text-[11px] md:text-[14px] text-white w-40 md:w-56 leading-5'>Lorem ipsum dolor sit amet consectetur. Et blandit eget metus  </p>
                 </div>
               </div>
 

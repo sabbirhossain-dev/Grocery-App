@@ -5,7 +5,7 @@ import ItemsCard from '../../components/ItemsCard'
 
 const BestSeller = () => {
 
-  const {fruits} = useContext(ShopContext)
+  const {fruits,addToCart} = useContext(ShopContext)
   const [bestSeller, setBestSeller] = useState([])
 
   useEffect(() => {
@@ -23,14 +23,17 @@ const BestSeller = () => {
         
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                     {bestSeller.map((item, index)=>(
-                      <ItemsCard 
+                      <ItemsCard
+                      item={item} 
                        key={index}
                        name={item.name}
                        id={item._id}
                        desc={item.description} 
                        price={item.price}
                        subprice={item.subprice}
-                       image ={item.image} />
+                       image ={item.image}
+                      addToCart={addToCart}
+ />
                     ))}
                 </div>
         

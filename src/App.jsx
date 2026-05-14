@@ -9,12 +9,14 @@ import Navbar from './components/navbar/Navbar'
 import AboutUs from './pages/about/AboutUs'
 import Faq from './pages/faq/Faq'
 import Fruits from './pages/fruits/Fruits'
-import Vegetables from './pages/Vegetables'
+import Vegetables from './pages/vegetables/Vegetables'
+import AllProducts from './pages/all/AllProducts'
 import Cart from './pages/Cart'
 import TermsAndConditons from './pages/TermsAndConditons'
 import Footer from './components/footer/Footer'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CheckOut from './pages/checkout/CheckOut'
 
 
 export default function App() {
@@ -25,6 +27,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/shop' element={<Shop />}/>
+          <Route path='/shop' element={<AllProducts />}/>
           <Route path='/shop/fruits' element={<Fruits />}/>
           <Route path='/shop/vegetables' element={<Vegetables />}/>
           <Route path='/pages/about' element={<AboutUs />}/>
@@ -34,6 +37,7 @@ export default function App() {
           <Route path='/blogs/details' element={<BlogDetails />}/>
           <Route path='/contact' element={<Contact />}/>
           <Route path='/cart' element={<Cart />}/>
+          <Route path='/checkout' element={<CheckOut />}/>
 
         </Routes>
         <Footer />
