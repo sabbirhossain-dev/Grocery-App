@@ -9,7 +9,7 @@ import { FaStar } from "react-icons/fa";
 //  Custom arrows
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute left-[-30px] md:left-[-40px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300"
+    className="absolute left-[-5px] md:left-[-35px] top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300"
     onClick={onClick}
   >
     <BsChevronLeft size={20} />
@@ -18,7 +18,7 @@ const PrevArrow = ({ onClick }) => (
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute right-[-30px] md:right-[-40px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300 text-ye"
+    className="absolute right-[-5px] md:right-[-35px] top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300 text-ye"
     onClick={onClick}
   >
     <BsChevronRight size={20} />
@@ -27,6 +27,7 @@ const NextArrow = ({ onClick }) => (
 
 
 function Feedback() {
+  
   const settings = {
     infinite: true,
     speed: 500,
@@ -47,11 +48,10 @@ function Feedback() {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2
+          slidesToScroll: 1
         }
       },
       {
@@ -59,7 +59,9 @@ function Feedback() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1
+          initialSlide: 1,
+          dots: true
+
 
         }
       }
@@ -68,17 +70,17 @@ function Feedback() {
   return (
     <div className='bg-white pt-20 pb-20 font-semibold'>
 
-    <div className='mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28'>
+    <div className="px-4 md:px-16 lg:px-28">
     <Title title="Our Customer Feedback" desc="Lorem ipsum dolor sit amet consectetur. Eget sollicitudin proin purus interdum ultrices sed faucibus."/>
     <div className="slider-container">
       <Slider {...settings}>
-        <div className="px-1">
-            <div className="bg-[#E9F5E9] p-5 rounded-md m-3">
-          <div className="flex gap-5">
-              <div><img src={assets.feedback1} alt='feedback image' className="h-12 w-36" /></div>
+          <div className="px-7 md:px-1">
+            <div className="bg-[#E9F5E9] p-5 rounded-md m-3 text-center md:text-start">
+         <div className="flex flex-col md:flex-row gap-5 items-center md:items-start">
+              <div><img src={assets.feedback1} alt='feedback image' className="w-16 h-auto md:h-12 md:w-36" /></div>
             <div className="flex flex-col gap-1">
                 <p>Ali Habib</p>
-                <ul className="flex gap-1 text-[#FE9C00]">
+                <ul className="flex justify-center md:justify-start gap-1 text-[#FE9C00]">
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
@@ -92,13 +94,13 @@ function Feedback() {
         </div>
        
 
-       <div className="px-1">
-            <div className="bg-[#E9F5E9] p-5 rounded-md m-3">
-          <div className="flex gap-5">
-              <div><img src={assets.feedback2} alt='feedback image' className="h-12 w-36" /></div>
+       <div className="px-7 md:px-1">
+            <div className="bg-[#E9F5E9] p-5 rounded-md m-3 text-center md:text-start">
+         <div className="flex flex-col md:flex-row gap-5 items-center md:items-start">
+              <div><img src={assets.feedback2} alt='feedback image' className="w-16 h-auto md:h-12 md:w-36" /></div>
             <div className="flex flex-col gap-1">
                 <p>Paul Walker</p>
-                <ul className="flex gap-1 text-[#FE9C00]">
+                <ul className="flex justify-center md:justify-start gap-1 text-[#FE9C00]">
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
@@ -112,13 +114,13 @@ function Feedback() {
         </div>
 
 
-        <div className="px-1">
-            <div className="bg-[#E9F5E9] p-5 rounded-md m-3">
-          <div className="flex gap-5">
-              <div><img src={assets.feedback3} alt='feedback image' className="h-12 w-36" /></div>
+          <div className="px-7 md:px-1">
+            <div className="bg-[#E9F5E9] p-5 rounded-md m-3 text-center md:text-start">
+         <div className="flex flex-col md:flex-row gap-5 items-center md:items-start">
+              <div><img src={assets.feedback3} alt='feedback image' className="w-16 h-auto md:h-12 md:w-36" /></div>
             <div className="flex flex-col gap-1">
                 <p>Salma Hayek</p>
-                <ul className="flex gap-1 text-[#FE9C00]">
+                <ul className="flex justify-center md:justify-start gap-1 text-[#FE9C00]">
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
@@ -131,13 +133,13 @@ function Feedback() {
         </div>
         </div>
 
-        <div className="px-1">
-            <div className="bg-[#E9F5E9] p-5 rounded-md m-3">
-          <div className="flex gap-5">
-              <div><img src={assets.feedback2} alt='feedback image' className="h-12 w-36" /></div>
+         <div className="px-7 md:px-1">
+            <div className="bg-[#E9F5E9] p-5 rounded-md m-3 text-center md:text-start">
+         <div className="flex flex-col md:flex-row gap-5 items-center md:items-start">
+              <div><img src={assets.feedback1} alt='feedback image' className="w-16 h-auto md:h-12 md:w-36" /></div>
             <div className="flex flex-col gap-1">
-                <p>Salam Qadar</p>
-                <ul className="flex gap-1 text-[#FE9C00]">
+                <p>Ali Habib</p>
+                <ul className="flex justify-center md:justify-start gap-1 text-[#FE9C00]">
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>
                     <li><FaStar size={10}/></li>

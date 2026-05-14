@@ -16,7 +16,8 @@ const Footer = () => {
 
 
             <div className='flex flex-col gap-16 lg:flex-row justify-between'>
-                <div className='flex gap-20 md:gap-32 w-full md:w-5/12'>
+
+                <div className='flex gap-10 md:gap-32 w-full md:w-5/12'>
                 <div className=''>
                         <NavLink to='/'>
                         <div className='flex items-center '>
@@ -24,10 +25,10 @@ const Footer = () => {
                         <p className='oleo-script-regular text-3xl -mt-2'>gr<span className='text-[#FE9C00]'>o</span>cery<span className='text-[#FE9C00]'>.</span></p>
                         </div>
                         </NavLink>
-                        <p className='text-sm md:text-md w-36 pt-5 pb-2 leading-tight'>Subscribe to our newsletter</p>
+                        <p className='text-sm md:text-md w-full font-light pt-5 pb-5 leading-tight'>Subscribe to our newsletter</p>
                         <div className='relative'>
-                            <input placeholder='Your email' type='email' className='bg-transparent border-b placeholder:text-white pb-1' />
-                            <button className='absolute right-0 bottom-1'><GoArrowUpRight size={20}/></button>
+                            <input placeholder='Your email' type='email' className='bg-transparent border-b outline-none placeholder:text-white pb-1' />
+                            <button className='absolute right-0 bottom-1 hover:rotate-45 transition-all duration-300'><GoArrowUpRight size={20}/></button>
                         </div>
                 </div>
 
@@ -72,7 +73,7 @@ const Footer = () => {
             </div>
             </div>
 
-            <div className='flex flex-col gap-5 text-[12px] md:text-[16px]'> 
+            <div className='flex flex-col items-center md:items-start gap-5 text-[12px] md:text-[16px]'> 
             <p className='text-[15px] md:text-[18px]'>Follow Us:</p>
                 <ul className='flex gap-3'>
                     <li className='border p-1 rounded-sm cursor-pointer'><Link to='/'>

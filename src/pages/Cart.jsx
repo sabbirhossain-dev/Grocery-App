@@ -55,11 +55,11 @@ const Cart = () => {
       )}
 
      <div className='mb-5 mt-5 flex gap-2 justify-between'>
-       <p className="text-xl text-[#075212] font-sans font-light ">
+       <p className="text-md md:text-xl text-[#075212] font-sans font-light ">
         Grand Total: ${total}
       </p>
 
-      <button className='px-4 py-1 text-md  bg-green-600 hover:bg-green-700 transition-all duration-300 text-white rounded-md '><Link to='/checkout'>Checkout</Link></button>
+      <button className='px-4 py-1 pb-2 text-sm md:text-md  bg-green-600 hover:bg-green-700 transition-all duration-300 text-white rounded-md '><Link to='/checkout'>Checkout</Link></button>
      </div>
 
     </div>

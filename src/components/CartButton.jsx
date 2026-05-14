@@ -23,7 +23,7 @@ const CartButton = () => {
   )
   return (
       <>
-      <div className='bg-[#E9F5E9] shadow-md text-2xl px-3 py-3 md:text-3xl md:px-4 md:py-4 rounded-md fixed top-1/2 -translate-y-1/2 right-0 text-[#2e5207]'><button onClick={()=>(setItemToggle(!itemToggle))} className='flex justify-center items-center flex-col gap-1'> <BsCart /><span><p className='text-sm relative'>{totalCount} items</p></span></button></div>
+      <div className='bg-[#E9F5E9] shadow-md text-xl px-3 py-3 md:text-3xl md:px-4 md:py-4 rounded-md fixed z-50 top-1/2 -translate-y-1/2 right-0 text-[#2e5207]'><button onClick={()=>(setItemToggle(!itemToggle))} className='flex justify-center items-center flex-col gap-1'> <BsCart /><span><p className='text-xs md:text-sm relative'>{totalCount} items</p></span></button></div>
 
       {itemToggle && ( 
         <div className='w-1/3 flex justify-self-end fixed top-28 right-0 z-50'>

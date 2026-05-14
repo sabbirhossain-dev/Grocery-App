@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa6";
 //  Custom arrows
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute left-[-30px] md:left-[-40px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300"
+    className="absolute left-[-30px] md:left-[-40px] top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300"
     onClick={onClick}
   >
     <BsChevronLeft size={20} />
@@ -19,7 +19,7 @@ const PrevArrow = ({ onClick }) => (
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute right-[-30px] md:right-[-40px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300 text-ye"
+    className="absolute right-[-30px] md:right-[-40px] top-1/2 transform -translate-y-1/2  cursor-pointer text-[#FE9C00] border-[#FE9C00] border rounded-full p-1 hover:text-white hover:bg-[#FE9C00] transition-all duration-300 text-ye"
     onClick={onClick}
   >
     <BsChevronRight size={20} />
