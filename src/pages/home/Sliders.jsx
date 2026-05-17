@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import SliderCard from "./SliderCard";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { assets } from "../../assets/assets";
+import { NavLink } from "react-router-dom";
 
 //  Custom arrows
 const PrevArrow = ({ onClick }) => (
@@ -63,46 +64,60 @@ function Responsive() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div className="px-4">
-          <SliderCard
-            data="Vegetables"
-            image={assets.slideImg1}
-            bgColor="bg-[#FEF4EA]"
-            hoverColor="group-hover:bg-[#FEF4EA]"
-          />
-        </div>
-        <div className="px-4">
-          <SliderCard
-            data="Fruit"
-            image={assets.slideImg2}
-            bgColor="bg-[#E9F5E9]"
-            hoverColor="group-hover:bg-[#E9F5E9]"
-          />
-        </div>
-        <div className="px-4">
-          <SliderCard
-            data="Meat"
-            image={assets.slideImg3}
-            bgColor="bg-[#FAEAEB]"
-            hoverColor="group-hover:bg-[#FAEAEB]"
-          />
-        </div>
-        <div className="px-4">
-          <SliderCard
-            data="Fish"
-            image={assets.slideImg4}
-            bgColor="bg-[#EEEEFA]"
-            hoverColor="group-hover:bg-[#EEEEFA]"
-          />
-        </div>
-        <div className="px-4">
-          <SliderCard
-            data="Fruit"
-            image={assets.slideImg2}
-            bgColor="bg-[#E9F5E9]"
-            hoverColor="group-hover:bg-[#E9F5E9]"
-          />
-        </div>
+        <NavLink to="/shop/vegetables">
+          <div className="px-4">
+            <SliderCard
+              data="Vegetables"
+              image={assets.slideImg1}
+              bgColor="bg-[#FEF4EA]"
+              hoverColor="group-hover:bg-[#FEF4EA]"
+            />
+          </div>
+        </NavLink>
+
+        <NavLink to="/shop/fruits">
+          <div className="px-4">
+            <SliderCard
+              data="Fruit"
+              image={assets.slideImg2}
+              bgColor="bg-[#E9F5E9]"
+              hoverColor="group-hover:bg-[#E9F5E9]"
+            />
+          </div>
+        </NavLink>
+
+        <NavLink to="/shop/meats">
+          <div className="px-4">
+            <SliderCard
+              data="Meat"
+              image={assets.slideImg3}
+              bgColor="bg-[#FAEAEB]"
+              hoverColor="group-hover:bg-[#FAEAEB]"
+            />
+          </div>
+        </NavLink>
+
+        <NavLink to="/shop/fish">
+          <div className="px-4">
+            <SliderCard
+              data="Fish"
+              image={assets.slideImg4}
+              bgColor="bg-[#EEEEFA]"
+              hoverColor="group-hover:bg-[#EEEEFA]"
+            />
+          </div>
+        </NavLink>
+
+        <NavLink to="/shop/fruits">
+          <div className="px-4">
+            <SliderCard
+              data="Fruit"
+              image={assets.slideImg2}
+              bgColor="bg-[#E9F5E9]"
+              hoverColor="group-hover:bg-[#E9F5E9]"
+            />
+          </div>
+        </NavLink>
       </Slider>
     </div>
   );

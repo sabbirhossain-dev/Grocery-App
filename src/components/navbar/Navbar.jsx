@@ -37,9 +37,9 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`bg-[#E9F5E9] pt-5 pb-5 md:pt-10 md:pb-10 font-semibold sticky top-0 z-50 ${isSticky ? "border-b border-[#bfdfc3] shadow-sm" : ""}`}
+        className={`bg-[#E9F5E9] border-b border-[#bfdfc3] pt-5 pb-5 md:pt-10 md:pb-10 font-semibold sticky top-0 z-50 ${isSticky ? "border-b border-[#bfdfc3] shadow-sm" : ""}`}
       >
-        <div className="mr-8 ml-8 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28 ">
+        <div className="mx-5 md:mx-16 lg:mx-28 ">
           {/* toggle menubar start */}
 
           <div className="md:hidden flex justify-between items-center">
@@ -83,10 +83,10 @@ const Navbar = () => {
           {/* toggle menu item start */}
           {menuToggle && (
             <motion.div
-              initial={{ opacity: 0, x: 10 }}
+              initial={{ opacity: 0, x: 70 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0, x: 70 }}
+              transition={{ duration: 0.5 }}
               className="md:hidden w-3/5 h-screen absolute shadow-md right-0 top-[80px] bg-[#E9F5E9] "
             >
               <ul className="flex flex-col justify-center pl-16 p-5 pb-10 rounded-md mt-2 w-full gap-7 text-md">
@@ -124,7 +124,7 @@ const Navbar = () => {
                       }`
                     }
                   >
-                    Shop{" "}
+                    Shop
                     <span className="inline-flex transition-transform duration-300">
                       {mobileShopOpen ? (
                         <MdKeyboardArrowUp size={16} />
@@ -141,9 +141,9 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute -left-32 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-80 bg-white shadow-xl z-50"
+                        className="absolute -left-12 top-7 pt-3 px-3 rounded-sm flex flex-col gap-2 w-40 bg-white shadow-xl border-t border-[#075212] z-50 text-sm"
                       >
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/all-products"
                             onClick={() => {
@@ -160,7 +160,7 @@ const Navbar = () => {
                             All items
                           </NavLink>
                         </li>
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/fruits"
                             onClick={() => {
@@ -177,7 +177,7 @@ const Navbar = () => {
                             Fruits
                           </NavLink>
                         </li>
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/vegetables"
                             onClick={() => {
@@ -192,6 +192,42 @@ const Navbar = () => {
                             }
                           >
                             Vegetables
+                          </NavLink>
+                        </li>
+
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
+                          <NavLink
+                            to="shop/meats"
+                            onClick={() => {
+                              setMenuToggle(!menuToggle);
+                            }}
+                            className={({ isActive }) =>
+                              `transition-colors duration-300 ${
+                                isActive
+                                  ? "text-[#FE9C00]"
+                                  : "text-[#075212] hover:text-[#FE9C00]"
+                              }`
+                            }
+                          >
+                            Meats
+                          </NavLink>
+                        </li>
+
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
+                          <NavLink
+                            to="shop/fish"
+                            onClick={() => {
+                              setMenuToggle(!menuToggle);
+                            }}
+                            className={({ isActive }) =>
+                              `transition-colors duration-300 ${
+                                isActive
+                                  ? "text-[#FE9C00]"
+                                  : "text-[#075212] hover:text-[#FE9C00]"
+                              }`
+                            }
+                          >
+                            Fish
                           </NavLink>
                         </li>
                       </motion.ul>
@@ -217,7 +253,7 @@ const Navbar = () => {
                       }`
                     }
                   >
-                    Pages{" "}
+                    Pages
                     <span className="inline-flex transition-transform duration-300">
                       {mobilePageOpen ? (
                         <MdKeyboardArrowUp size={16} />
@@ -229,14 +265,15 @@ const Navbar = () => {
 
                   <AnimatePresence>
                     {mobilePageOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ul className="absolute -left-32 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-80 bg-white shadow-xl">
-                          <li className="text-[#075212] hover:text-[#FE9C00]">
+                      <div>
+                        <motion.ul
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.3 }}
+                          className="absolute -left-12 top-7 pt-3 px-3 rounded-sm flex flex-col gap-2 w-40 bg-white shadow-xl border-t border-[#075212] z-40 text-sm"
+                        >
+                          <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                             <NavLink
                               to="pages/about"
                               onClick={() => {
@@ -253,7 +290,7 @@ const Navbar = () => {
                               About Us
                             </NavLink>
                           </li>
-                          <li className="text-[#075212] hover:text-[#FE9C00]">
+                          <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                             <NavLink
                               to="pages/faq"
                               onClick={() => {
@@ -270,7 +307,7 @@ const Navbar = () => {
                               FAQ
                             </NavLink>
                           </li>
-                          <li className="text-[#075212] hover:text-[#FE9C00]">
+                          <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                             <NavLink
                               to="pages/terms&conditions"
                               onClick={() => {
@@ -287,8 +324,8 @@ const Navbar = () => {
                               Term & Conditions
                             </NavLink>
                           </li>
-                        </ul>
-                      </motion.div>
+                        </motion.ul>
+                      </div>
                     )}
                   </AnimatePresence>
                 </li>
@@ -379,14 +416,14 @@ const Navbar = () => {
                   <NavLink
                     to="/shop"
                     className={({ isActive }) =>
-                      `transition-colors duration-300 ${
+                      `transition-colors pb-2 duration-300 ${
                         isActive
                           ? "text-[#FE9C00]"
                           : "text-[#075212] hover:text-[#FE9C00]"
                       }`
                     }
                   >
-                    Shop{" "}
+                    Shop
                     <span className="inline-flex transition-transform duration-300">
                       {shopOpen ? (
                         <MdKeyboardArrowUp size={16} />
@@ -403,9 +440,9 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute -left-40 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-96 bg-white shadow-xl z-50"
+                        className="absolute top-8  -left-20 px-6 rounded-sm flex flex-col gap-2 pt-4 w-52 border-t border-[#075212] bg-white shadow-xl z-50"
                       >
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/all-products"
                             className={({ isActive }) =>
@@ -419,7 +456,8 @@ const Navbar = () => {
                             All Products
                           </NavLink>{" "}
                         </li>
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/fruits"
                             className={({ isActive }) =>
@@ -433,7 +471,7 @@ const Navbar = () => {
                             Fruits
                           </NavLink>{" "}
                         </li>
-                        <li className="text-[#075212] hover:text-[#FE9C00]">
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                           <NavLink
                             to="shop/vegetables"
                             className={({ isActive }) =>
@@ -445,6 +483,36 @@ const Navbar = () => {
                             }
                           >
                             Vegetables
+                          </NavLink>{" "}
+                        </li>
+
+                        <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
+                          <NavLink
+                            to="shop/meats"
+                            className={({ isActive }) =>
+                              `transition-colors duration-300 ${
+                                isActive
+                                  ? "text-[#FE9C00]"
+                                  : "text-[#075212] hover:text-[#FE9C00]"
+                              }`
+                            }
+                          >
+                            Meats
+                          </NavLink>{" "}
+                        </li>
+
+                        <li className="text-[#075212] pb-3 hover:text-[#FE9C00]">
+                          <NavLink
+                            to="shop/fish"
+                            className={({ isActive }) =>
+                              `transition-colors duration-300 ${
+                                isActive
+                                  ? "text-[#FE9C00]"
+                                  : "text-[#075212] hover:text-[#FE9C00]"
+                              }`
+                            }
+                          >
+                            Fish
                           </NavLink>{" "}
                         </li>
                       </motion.ul>
@@ -487,9 +555,9 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3 }}
-                      className="absolute -left-40 p-8 text-center rounded-sm flex flex-col gap-2 pt-5 w-96 bg-white shadow-xl"
+                      className="absolute top-8  -left-20 px-6 rounded-sm flex flex-col gap-2 pt-4 w-52 border-t border-[#075212] bg-white shadow-xl z-50"
                     >
-                      <li className="text-[#075212] hover:text-[#FE9C00]">
+                      <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                         <NavLink
                           to="pages/about"
                           className={({ isActive }) =>
@@ -503,7 +571,7 @@ const Navbar = () => {
                           About Us
                         </NavLink>
                       </li>
-                      <li className="text-[#075212] hover:text-[#FE9C00]">
+                      <li className="text-[#075212] hover:text-[#FE9C00] border-b border-[#ecddc4] pb-2 ">
                         <NavLink
                           to="pages/faq"
                           className={({ isActive }) =>
@@ -517,7 +585,7 @@ const Navbar = () => {
                           FAQ
                         </NavLink>
                       </li>
-                      <li className="text-[#075212] hover:text-[#FE9C00]">
+                      <li className="text-[#075212] hover:text-[#FE9C00] pb-2 ">
                         <NavLink
                           to="pages/terms&conditions"
                           className={({ isActive }) =>

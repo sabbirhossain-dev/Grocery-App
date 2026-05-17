@@ -17,6 +17,8 @@ import Footer from "./components/footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CheckOut from "./pages/checkout/CheckOut";
+import Fish from "./pages/Fish";
+import Meats from "./pages/Meats";
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/shop/all-products" element={<AllProducts />} />
           <Route path="/shop/fruits" element={<Fruits />} />
           <Route path="/shop/vegetables" element={<Vegetables />} />
+          <Route path="/shop/meats" element={<Meats />} />
+          <Route path="/shop/fish" element={<Fish />} />
           <Route path="/pages/about" element={<AboutUs />} />
           <Route path="/pages/faq" element={<Faq />} />
           <Route

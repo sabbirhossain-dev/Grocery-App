@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import BannerTitle from "../../components/BannerTitle";
-import { assets } from "../../assets/assets";
-import ItemsCard from "../../components/ItemsCard";
-import { ShopContext } from "../../context/ShopContext";
-import CartButton from "../../components/CartButton";
-import Pagination from "../../components/Pagination";
+import BannerTitle from "../components/BannerTitle";
+import { assets } from "../assets/assets";
+import ItemsCard from "../components/ItemsCard";
+import { ShopContext } from "../context/ShopContext";
+import Pagination from "../components/Pagination";
 import { BsSearch } from "react-icons/bs";
 import { GoPlus } from "react-icons/go";
 import { HiMinus } from "react-icons/hi2";
+import CartButton from "../components/CartButton";
 
-const Fruits = () => {
+const Fish = () => {
   const { fruits, addToCart } = useContext(ShopContext);
   const [fruitsItems, setFruitItems] = useState([]);
   // const [category, setCategory] = useState([]);
@@ -48,7 +48,7 @@ const Fruits = () => {
   useEffect(() => {
     let filtered = [...fruits];
 
-    filtered = filtered.filter((item) => item.category === "Vegetables");
+    filtered = filtered.filter((item) => item.category === "Fish");
 
     // Filter by category
     // if (category.length > 0) {
@@ -123,7 +123,7 @@ const Fruits = () => {
 
       <div className="pt-10 pb-20 font-semibold bg-white">
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl text-[#075212] pb-10">Vegetables</h2>
+          <h2 className="text-3xl text-[#075212] pb-10">Fish</h2>
         </div>
 
         <div className="mx-6 md:mx-16 lg:mx-28">
@@ -145,7 +145,7 @@ const Fruits = () => {
               </div>
 
               <select
-                className="bg-[#E9F5E9] p-2 md:p-3 text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
+                className="bg-[#E9F5E9] p-2 md:p-3  text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
                 onChange={(e) => {
                   setSortTypes(e.target.value);
                 }}
@@ -257,4 +257,4 @@ const Fruits = () => {
   );
 };
 
-export default Fruits;
+export default Fish;

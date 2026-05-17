@@ -28,7 +28,7 @@ const Categories = () => {
                 We Ensure You to Pesticide Free products
               </p>
               <button className="bg-[#01A919] text-white pt-2 pr-4 pb-2 pl-4 rounded-lg text-xs md:text-sm hover:bg-green-700 transition-all duration-300">
-                <Link to="/">Start Shopping</Link>
+                <Link to="/shop">Start Shopping</Link>
               </button>
             </div>
             <div className="flex justify-center pb-6">
@@ -49,7 +49,7 @@ const Categories = () => {
                   Start Your day with Our Pure Dairy Products
                 </p>
                 <button className="bg-[#01A919] text-white pt-2 pr-4 pb-2 pl-4 rounded-lg text-xs md:text-sm hover:bg-green-700 transition-all duration-300">
-                  <Link to="/">Start Shopping</Link>
+                  <Link to="/shop">Start Shopping</Link>
                 </button>
               </div>
             </div>
@@ -66,7 +66,7 @@ const Categories = () => {
                   Make Everyday Fresh & Healthy
                 </p>
                 <button className="bg-[#01A919] text-white pt-2 pr-4 pb-2 pl-4 rounded-lg text-xs md:text-sm hover:bg-green-700 transition-all duration-300">
-                  <Link to="/">Start Shopping</Link>
+                  <Link to="/shop">Start Shopping</Link>
                 </button>
               </div>
             </div>

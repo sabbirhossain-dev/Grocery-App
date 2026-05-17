@@ -7,6 +7,7 @@ import About from "./About";
 import Feedback from "./Feedback";
 import Blogs from "./Blogs";
 import CartButton from "../../components/CartButton";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <div className="mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28">
           <div className="flex flex-col gap-7 md:flex-row justify-between items-center">
             <div className="w-full lg:w-1/2">
-              <h2 className="lato-bold text-[40px] lg:text-[64px] text-[#075212]">
+              <h2 className="lato-bold text-[28px] lg:text-[64px] text-[#075212]">
                 Eat <span className="text-[#FE9C00]">Fresh</span> &{" "}
                 <span className="text-[#FE9C00]">Safe</span> Food to Enjoy
                 Healthy Life
@@ -28,11 +29,13 @@ const Home = () => {
                 augue lacus. Eu quisque auctor laoreet q
               </p>
               <div className="flex gap-5">
-                <button className="p-2 md:p-3 md:pl-5 md:pr-5 bg-[#FE9C00] text-white rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300">
-                  Start Shopping
-                </button>
+                <NavLink to="/shop">
+                  <button className="p-2 md:p-3 md:pl-5 md:pr-5 bg-[#FE9C00] text-white rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300">
+                    Start Shopping
+                  </button>
+                </NavLink>
 
-                <button className="flex gap-2 items-center p-2 md:p-3 md:pl-5 md:pr-5 bg-transparent border border-[#FE9C00] text-[#075212] rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300">
+                <button className="flex gap-2 items-center p-1 px-2 md:p-3 md:px-5 bg-transparent border border-[#FE9C00] text-[#075212] rounded-md text-xs md:text-sm hover:rounded-none transition-all duration-300">
                   <span>
                     <FaCirclePlay size={21} className="text-[#FE9C00]" />
                   </span>
