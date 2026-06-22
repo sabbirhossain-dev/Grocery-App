@@ -1,5 +1,7 @@
 // import {assets} from '../src/assets/assets'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Home from "./pages/home/Home";
 import Shop from "./pages/Shop";
 import Blogs from "./pages/blogs/Blogs";
@@ -19,6 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CheckOut from "./pages/checkout/CheckOut";
 import Fish from "./pages/Fish";
 import Meats from "./pages/Meats";
+import Error from "./pages/Error";
 
 export default function App() {
   return (
@@ -44,6 +47,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
         <ToastContainer />

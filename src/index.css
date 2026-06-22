@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
-
+*{
+  margin: 0;
+  padding: 0;
+}
 
 @tailwind base;
 @tailwind components;
@@ -38,4 +43,33 @@
   font-size: 30px;
   opacity: 1;
   line-height: 1;
+}
+
+/* কাস্টম সিএসএস যা স্লাইডারের ফ্লেক্স কনফ্লিক্ট ঠিক করবে */
+.slick-slider {
+  width: 100%;
+  display: block;
+}
+
+.slick-list {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+/* এই ট্র্যাকের display: flex !important একদম ফেলে দিন */
+.slick-track {
+  display: block !important; /* ফ্লেক্সের বদলে ব্লক অথবা নরমাল রাখুন, রিয়্যাক্ট স্লিক নিজেই এটাকে হ্যান্ডেল করবে */
+}
+
+/* নিশ্চিত করুন স্লাইডের ভেতরের ডিভগুলো যেন ফ্লোট বা ব্লক ঠিক থাকে */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.slick-slide > div {
+  width: 100%;
+  display: block;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const Title = ({ title, desc, align = "center" }) => {
   return (
-    <div className={`flex flex-col gap-2 text-${align} mb-16`}>
+    <div className={`flex flex-col gap-2 text-${align} mb-10 md:mb-16`}>
       <h3 className="text-[26px] md:text-[40px] lg:text-[48px] font-bold lato-bold text-[#075212]">
         {title}
       </h3>

@@ -6,16 +6,16 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <div className="bg-white pt-20 pb-10 font-semibold">
-        <div className="mr-8 ml-8 md:mr-16 md:ml-16 lg:mr-28">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-20 text-start ">
+      <div className="bg-white pt-10 pb-10 md:pt-20 md:pb-20 font-semibold">
+        <div className="mx-10 md:mx-16 lg:mx-28">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20 text-start ">
             <div className="w-full md:w-7/12 relative">
               <Title
                 title="Know About Us"
                 desc="Lorem ipsum dolor sit amet consectetur. Dictum tellus massa et condimentum facilisi id commodo diam viverra. Hac sapien lectus risus varius libero risus magnis diam mattis. Elit amet pretium ac mattis ut tempor. Egestas eget commodo at tempus. Id turpis venenatis congue viverra risus tellus ac."
                 align="left"
               />
-              <button className=" absolute bottom-2 left-0 text-[10px] md:text-[13px] text-white -mt-20 lato-bold bg-[#FE9C00] hover:underline hover:bg-[#774d0a] transition-all duration-300 p-2 px-2 md:px-3 rounded-md">
+              <button className=" absolute bottom-2 md:bottom-2 left-0 text-[10px] md:text-[13px] text-white -mt-20 lato-bold bg-[#FE9C00] hover:underline hover:bg-[#774d0a] transition-all duration-300 p-1 md:p-2 px-2 md:px-3 rounded-md">
                 <Link to="/pages/about">Read More</Link>
               </button>
             </div>
@@ -34,7 +34,7 @@ const About = () => {
       {/* more about us */}
       <div className="bg-[#075212] pt-10 md:pt-20 pb-10 md:pb-20 font-semibold">
         <div className="mx-8 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-20">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-20">
             <div className="flex flex-col md:flex-row gap-2 w-full md:w-1/4">
               <img
                 src={assets.aboutlogo1}

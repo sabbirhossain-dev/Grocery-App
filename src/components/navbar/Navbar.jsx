@@ -86,7 +86,7 @@ const Navbar = () => {
               initial={{ opacity: 0, x: 70 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 70 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.25 }}
               className="md:hidden w-3/5 h-screen absolute shadow-md right-0 top-[80px] bg-[#E9F5E9] "
             >
               <ul className="flex flex-col justify-center pl-16 p-5 pb-10 rounded-md mt-2 w-full gap-7 text-md">

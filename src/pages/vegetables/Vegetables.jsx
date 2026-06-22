@@ -131,21 +131,21 @@ const Fruits = () => {
 
           <div className="flex-1">
             <div className="flex gap-4 justify-between items-center mb-6 border-t border-b border-[#e4e4e4] py-5 px-1">
-              <div className="w-1/2 md:w-3/4 bg-[#E9F5E9] p-2 md:p-3 rounded-sm flex items-center gap-3 md:gap-5">
+              <div className="w-1/2 md:w-3/4 bg-[#E9F5E9] p-2 md:p-3 rounded-sm flex items-center gap-1 md:gap-1">
                 <span className="text-[#075212]">
                   <BsSearch size={16} />
                 </span>
                 <input
                   type="text"
                   placeholder="Search Product"
-                  className="text-[16px] lato-regular text-[#075212] w-full placeholder:text-[#075212] outline-none border-none bg-transparent"
+                  className="text-[14px] md:text-[16px] lato-regular text-[#075212] w-full placeholder:text-[#075212] outline-none border-none bg-transparent"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
 
               <select
-                className="bg-[#E9F5E9] p-2 md:p-3 text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
+                className="bg-[#E9F5E9] p-3 text-[14px] md:text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
                 onChange={(e) => {
                   setSortTypes(e.target.value);
                 }}
@@ -186,7 +186,7 @@ const Fruits = () => {
 
                 <div className="">
                   <div className="flex justify-between bg-[#E9F5E9] p-3">
-                    <p className="text-[16px] text-[#075212] lato-regular">
+                    <p className="text-[14px] md:text-[16px] text-[#075212] lato-regular">
                       Price
                     </p>
                     <button
@@ -212,7 +212,7 @@ const Fruits = () => {
                             onChange={handlePriceToggle}
                             className="accent-green-600 h-4 w-4"
                           />
-                          <p className="text-[16px] text-[#075212] lato-regular font-medium">
+                          <p className="text-[14px] md:text-[16px] text-[#075212] lato-regular font-medium">
                             {cat}
                           </p>
                         </div>

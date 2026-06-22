@@ -13,7 +13,7 @@ import { LuCopyright } from "react-icons/lu";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#075212] text-white px-8 py-10 md:pt-16 pb-10 md:pb-16">
+      <div className="bg-[#075212] text-white px-8 pt-10 md:pt-16 pb-3">
         <div className="flex flex-col gap-10 md:gap-20 mr-1 ml-1 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28 lato-regular">
           <div className="flex flex-col gap-16 lg:flex-row justify-between">
             <div className="flex gap-10 md:gap-32 w-full md:w-5/12">
@@ -34,7 +34,7 @@ const Footer = () => {
                   <input
                     placeholder="Your email"
                     type="email"
-                    className="bg-transparent w-44 border-b outline-none placeholder:text-white pb-1"
+                    className="bg-transparent w-44 border-b outline-none pr-6 placeholder:text-white pb-1"
                   />
                   <button className="absolute right-0 bottom-1 hover:rotate-45 transition-all duration-300">
                     <GoArrowUpRight size={20} />
@@ -143,16 +143,19 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex justify-between pt-2 border-t text-[#748398] border-t-[#748398] text-xs md:text-sm">
+          <div className="flex justify-center pt-2 border-t text-[#748398] border-t-[#748398] text-xs md:text-sm">
             <div className="flex justify-between items-center gap-1">
               <LuCopyright />
               <p>2020 Casir. All right reserved</p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-2">
-              <p>Privacy Policy</p>
-              <p>Terms & Conditions</p>
-            </div>
+            {/* <div className="flex md:flex-row justify-between items-center gap-2">
+              <NavLink to="/pages/terms&conditions">Privacy Policy</NavLink>
+              <span>|</span>
+              <NavLink to="/pages/terms&conditions">
+                Terms & Conditions
+              </NavLink>{" "}
+            </div> */}
           </div>
         </div>
       </div>

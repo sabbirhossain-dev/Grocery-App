@@ -14,7 +14,7 @@ const BestSeller = () => {
 
   return (
     <>
-      <div className="bg-[#E9F5E9] pt-20 pb-20 font-semibold">
+      <div className="bg-[#E9F5E9] pt-10 pb-10 md:pt-20 md:pb-20 font-semibold">
         <div className="mr-10 ml-10 md:mr-16 md:ml-16 lg:mr-28 lg:ml-28">
           <Title
             title="Best Seller This Month"

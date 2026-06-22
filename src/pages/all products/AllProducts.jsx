@@ -7,6 +7,7 @@ import Pagination from "../../components/Pagination";
 import { BsSearch } from "react-icons/bs";
 import { GoPlus } from "react-icons/go";
 import { HiMinus } from "react-icons/hi2";
+import CartButton from "../../components/CartButton";
 
 const AllProduct = () => {
   const { fruits, addToCart } = useContext(ShopContext);
@@ -116,27 +117,29 @@ const AllProduct = () => {
         />
       </div>
 
+      <CartButton />
+
       <div className="pt-20 pb-20 font-semibold bg-white">
         <div className="mx-6 md:mx-16 lg:mx-28">
           {/* <p className='lato-bold text-[30px] md:text-[35px] lg:text-[48px] text-[#075212] text-center pb-10'>All items</p> */}
 
           <div className="flex-1">
             <div className="flex gap-4 justify-between items-center mb-6 border-t border-b border-[#e4e4e4] py-5 px-1">
-              <div className="w-1/2 md:w-3/4 bg-[#E9F5E9] p-3 rounded-sm flex items-center gap-2">
+              <div className="w-1/2 md:w-3/4 bg-[#E9F5E9] p-2 md:p-3 rounded-sm flex items-center gap-1 md:gap-1">
                 <span className="text-[#075212]">
                   <BsSearch size={16} />
                 </span>
                 <input
                   type="text"
                   placeholder="Search Product"
-                  className="text-[16px] lato-regular text-[#075212] w-full placeholder:text-[#075212] outline-none border-none bg-transparent"
+                  className="text-[14px] md:text-[16px] lato-regular text-[#075212] w-full placeholder:text-[#075212] outline-none border-none bg-transparent"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
 
               <select
-                className="bg-[#E9F5E9] p-3 text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
+                className="bg-[#E9F5E9] p-3 text-[14px] md:text-[16px] lato-regular text-[#075212] w-1/2 md:w-1/4 outline-none border-none  rounded-sm"
                 onChange={(e) => {
                   setSortTypes(e.target.value);
                 }}
@@ -149,11 +152,11 @@ const AllProduct = () => {
 
             <div className="flex flex-col md:flex-row gap-5">
               {/* filter sidebar here */}
-              <div className="w-full md:w-3/12 flex flex-col gap-5">
+              <div className="w-full md:w-3/12 flex md:flex-col justify-between md:justify-normal gap-5">
                 {/* category */}
                 <div className="">
                   <div className="flex justify-between bg-[#E9F5E9] p-3">
-                    <p className="text-[16px] text-[#075212] lato-regular">
+                    <p className="text-[14px] md:text-[16px]  text-[#075212] lato-regular">
                       Category
                     </p>
                     <button
@@ -179,7 +182,7 @@ const AllProduct = () => {
                             onChange={handlecategoryToggle}
                             className="accent-green-600 h-4 w-4"
                           />
-                          <p className="text-[16px] text-[#075212] lato-regular font-medium">
+                          <p className="text-[14px] md:text-[16px]  text-[#075212] lato-regular font-medium">
                             {cat}
                           </p>
                         </div>
@@ -191,7 +194,7 @@ const AllProduct = () => {
 
                 <div className="">
                   <div className="flex justify-between bg-[#E9F5E9] p-3">
-                    <p className="text-[16px] text-[#075212] lato-regular">
+                    <p className="text-[14px] md:text-[16px] text-[#075212] lato-regular">
                       Price
                     </p>
                     <button
@@ -217,7 +220,7 @@ const AllProduct = () => {
                             onChange={handlePriceToggle}
                             className="accent-green-600 h-4 w-4"
                           />
-                          <p className="text-[16px] text-[#075212] lato-regular font-medium">
+                          <p className="text-[14px] md:text-[16px] text-[#075212] lato-regular font-medium">
                             {cat}
                           </p>
                         </div>
