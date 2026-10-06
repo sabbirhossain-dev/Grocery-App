@@ -9,17 +9,19 @@ A modern and responsive online grocery shopping web application built with React
 
 ## 🛠️ Technology Stack
 
-### Frontend
 
-- ⚛️ React 19
-- ⚡ Vite 7
-- 🎨 Tailwind CSS
-- 🧭 React Router DOM
-- ✨ Framer Motion
-- 🎯 React Icons
-- 🎠 React Slick
-- 📱 Swiper
-- 🔔 React Toastify
+| Technology | Purpose |
+|:---|:---|
+| **React** | Building the user interface |
+| **Vite** | Fast development and production build tool |
+| **Tailwind CSS** | Styling and responsive design |
+| **React Router** | Client-side routing and navigation |
+| **Framer Motion** | Smooth animations and transitions |
+| **React Icons** | User interface icons |
+| **Swiper** | Responsive sliders and touch-enabled carousels |
+| **React Slick** | Interactive carousel functionality |
+| **React Toastify** | Toast notifications and user feedback |
+
 
 ### Development Tools
 
@@ -108,6 +110,11 @@ http://localhost:5173
 
 ## Project Structure
 
+
+```
+## 📁 Project Structure
+
+```text
 Grocery-App/
 │
 ├── public/
@@ -131,21 +138,16 @@ Grocery-App/
 ├── tailwind.config.js
 ├── vite.config.js
 └── README.md
+```
 
+## Relevant Links
 
-## Main Technologies
+🌐 Live Demo
+https://web-grocery-app.vercel.app/
 
-| Technology | Purpose |
-|:---|:---|
-| **React** | Building the user interface |
-| **Vite** | Fast development and production build tool |
-| **Tailwind CSS** | Styling and responsive design |
-| **React Router** | Client-side routing and navigation |
-| **Framer Motion** | Smooth animations and transitions |
-| **React Icons** | User interface icons |
-| **Swiper** | Responsive sliders and touch-enabled carousels |
-| **React Slick** | Interactive carousel functionality |
-| **React Toastify** | Toast notifications and user feedback |
+💻 GitHub Repository
+https://github.com/sabbirhossain-dev/Grocery-App
+
 
 
 
