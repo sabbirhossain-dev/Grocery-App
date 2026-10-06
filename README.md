@@ -46,6 +46,7 @@ A modern and responsive online grocery shopping web application built with React
 - ⚡ Fast development with Vite
 - 📱 Mobile-friendly layout
 - 🎯 User-friendly shopping experience
+  
 
 ## 📦 Dependencies
 
@@ -61,6 +62,7 @@ The project uses the following main dependencies:
 - `swiper`
 - `react-toastify`
 
+
 ### Development Dependencies
 
 - `vite`
@@ -70,7 +72,8 @@ The project uses the following main dependencies:
 - `autoprefixer`
 - `eslint`
 
-## 🚀 Getting Started
+
+## ⚙️ Setup & Installation
 
 Follow the instructions below to run the project on your local machine.
 
@@ -112,9 +115,9 @@ http://localhost:5173
 
 
 ```
-## 📁 Project Structure
+📁 Project Structure
 
-```text
+
 Grocery-App/
 │
 ├── public/
