@@ -99,16 +99,24 @@ git clone https://github.com/sabbirhossain-dev/Grocery-App.git
 ```
 
 ### 2. Navigate to the Project Directory
+```bash
 cd Grocery-App
+```
 
 ###  3. Install Dependencies
+```bash
 npm install
+```
 
 ### 4. Start the Development Server
+```bash
 npm run dev
+```
 
 #### Usually, the application will be available at:
+```bash
 http://localhost:5173
+```
 
 
 ## Project Structure
